@@ -5,15 +5,12 @@ class Solution {
         int answer = 0;
 
         for (String skill_tree : skill_trees) {
-            skill_tree = skill_tree.replaceAll("[^"+skill+"]", "");
+            skill_tree = skill_tree.replaceAll("[^" + skill + "]", "");
+
+            if (skill.indexOf(skill_tree) == 0) {
+                answer++;
+            }
         }
         return answer;
-    }
-
-    public static void main(String[] args) {
-        String skill = "CBD";
-        String[] skill_trees = {"BACDE", "CBADF", "AECB", "BDA"};
-        Solution s = new Solution();
-        s.solution(skill, skill_trees);
     }
 }
