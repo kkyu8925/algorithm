@@ -7,11 +7,9 @@ class Solution {
     public int solution(String numbers) {
         int count = 0;
         HashSet<Integer> set = new HashSet<>();
-
         permutation("", numbers, set);
 
         Iterator<Integer> it = set.iterator();
-
         while (it.hasNext()) {
             int a = it.next();
             set.remove(a);
@@ -29,7 +27,6 @@ class Solution {
         if (n == 0 || n == 1) {
             return false;
         }
-
         for (int i = 3; i <= (int) Math.sqrt(n); i += 2) {
             if (n % i == 0) {
                 return false;
@@ -40,7 +37,6 @@ class Solution {
 
     public void permutation(String prefix, String str, HashSet<Integer> set) {
         int n = str.length();
-
         if (!prefix.equals("")) {
             set.add(Integer.valueOf(prefix));
         }
