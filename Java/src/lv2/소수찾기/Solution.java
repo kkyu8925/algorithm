@@ -4,27 +4,27 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 class Solution {
+
     public int solution(String numbers) {
-        int count = 0;
+        int answer = 0;
         HashSet<Integer> set = new HashSet<>();
-        permutation("", numbers, set);
+        perm("", numbers, set);
 
         Iterator<Integer> it = set.iterator();
         while (it.hasNext()) {
             int a = it.next();
-            set.remove(a);
             if (a == 2) {
-                count++;
+                answer++;
             }
             if (a % 2 != 0 && isPrime(a)) {
-                count++;
+                answer++;
             }
         }
-        return count;
+        return answer;
     }
 
     public boolean isPrime(int n) {
-        if (n == 0 || n == 1) {
+        if (n < 2) {
             return false;
         }
         for (int i = 3; i <= (int) Math.sqrt(n); i += 2) {
@@ -35,13 +35,12 @@ class Solution {
         return true;
     }
 
-    public void permutation(String prefix, String str, HashSet<Integer> set) {
-        int n = str.length();
+    public void perm(String prefix, String str, HashSet<Integer> set) {
         if (!prefix.equals("")) {
             set.add(Integer.valueOf(prefix));
         }
-        for (int i = 0; i < n; i++) {
-            permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n), set);
+        for (int i = 0; i < str.length(); i++) {
+            perm(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1), set);
         }
 
     }
