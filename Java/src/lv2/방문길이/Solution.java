@@ -2,7 +2,7 @@ package lv2.방문길이;
 
 class Solution {
     static int[] dx = {0, 0, 1, -1};
-    static int[] dy = {-1, 1, 0, 0};
+    static int[] dy = {1, -1, 0, 0};
     static boolean[][][][] visit = new boolean[11][11][11][11];
 
     public int solution(String dirs) {
