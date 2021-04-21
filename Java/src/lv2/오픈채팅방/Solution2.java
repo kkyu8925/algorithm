@@ -6,12 +6,10 @@ import java.util.List;
 
 public class Solution2 {
     public String[] solution(String[] records) {
-        HashMap<String, String> codeMap = new HashMap<>();
-        codeMap.put("enter", "들어왔습니다.");
-        codeMap.put("leave", "나갔습니다.");
-
-        HashMap<String, String> idMap = new HashMap<>();
         List<String> rList = new ArrayList<>();
+        HashMap<String, String> idMap = new HashMap<>();
+        idMap.put("enter", "들어왔습니다.");
+        idMap.put("leave", "나갔습니다.");
 
         for (String record : records) {
             String[] splitArr = record.split(" ");
@@ -27,13 +25,15 @@ public class Solution2 {
         }
 
         String[] answer = new String[rList.size()];
-        for (int i = 0; i < answer.length; i++) {
-            String[] splitArr = rList.get(i).split(" ");
+        int i = 0;
+        for (String record : rList) {
+            String[] splitArr = record.split(" ");
             String name = idMap.get(splitArr[1]);
-            answer[i] = name + "님이 " + codeMap.get(splitArr[0].toLowerCase());
+            answer[i++] = name + "님이 " + idMap.get(splitArr[0].toLowerCase());
         }
 
         return answer;
     }
+
 }
 
