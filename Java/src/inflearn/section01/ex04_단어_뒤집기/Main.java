@@ -1,4 +1,4 @@
-package section01.ex04_단어_뒤집기;
+package inflearn.section01.ex04_단어_뒤집기;
 
 import java.util.ArrayList;
 import java.util.List;

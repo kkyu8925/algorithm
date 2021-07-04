@@ -1,4 +1,4 @@
-package section01.ex07_회문_문자열;
+package inflearn.section01.ex07_회문_문자열;
 
 import java.util.Scanner;
 

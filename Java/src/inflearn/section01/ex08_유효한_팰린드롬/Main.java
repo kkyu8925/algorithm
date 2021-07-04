@@ -1,4 +1,4 @@
-package section01.ex08_유효한_팰린드롬;
+package inflearn.section01.ex08_유효한_팰린드롬;
 
 import java.util.Scanner;
 
