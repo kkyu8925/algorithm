@@ -17,7 +17,7 @@ class Solution {
                 dfs(i, check, wires);
             }
         }
-
+        System.out.println(answer);
         return answer;
     }
 
@@ -30,8 +30,8 @@ class Solution {
             if (check[b] == false) {
                 dfs(b, check, wires);
             }
-            if(check[a]==false) {
-                dfs(a,check,wires);
+            if (check[a] == false) {
+                dfs(a, check, wires);
             }
         }
     }
@@ -39,8 +39,14 @@ class Solution {
 
     public static void main(String[] args) {
         Solution T = new Solution();
-        int n = 9;
-        int[][] wires = {{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}};
-        T.solution(n, wires);
+        int n1 = 9;
+        int[][] wires1 = {{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}};
+        T.solution(n1, wires1); // 3
+        int n2 = 4;
+        int[][] wires2 = {{1, 2}, {2, 3}, {3, 4}};
+        T.solution(n2, wires2); // 0
+        int n3 = 7;
+        int[][] wires3 = {{1, 2}, {2, 7}, {7, 3}, {3, 4}, {4, 5}, {7, 6}};
+        T.solution(n3, wires3); // 1
     }
 }
