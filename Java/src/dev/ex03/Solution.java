@@ -13,6 +13,7 @@ class Solution {
 
         for (int i = 1; i <= n; i++) {
             if (check[i] == false) {
+                answer++;
                 dfs(i, check, wires);
             }
         }
@@ -29,8 +30,8 @@ class Solution {
             if (check[b] == false) {
                 dfs(b, check, wires);
             }
-            if (check[a] == false) {
-                dfs(a, check, wires);
+            if(check[a]==false) {
+                dfs(a,check,wires);
             }
         }
     }
