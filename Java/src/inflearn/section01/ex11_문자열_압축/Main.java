@@ -6,7 +6,7 @@ public class Main {
 
     public String solution(String str) {
         String answer = "";
-        str = str + " ";
+        str = str + " "; // 마지막 글자도 확인을 위해 공백 추가
         int cnt = 1;
 
         for (int i = 0; i < str.length() - 1; i++) {
@@ -14,9 +14,11 @@ public class Main {
                 cnt++;
             } else {
                 answer += str.charAt(i);
+
                 if (cnt > 1) {
                     answer += String.valueOf(cnt);
                 }
+
                 cnt = 1;
             }
         }
