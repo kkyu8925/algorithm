@@ -22,7 +22,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         String str = sc.next();
-
         System.out.print(T.solution(num, str));
     }
 }
