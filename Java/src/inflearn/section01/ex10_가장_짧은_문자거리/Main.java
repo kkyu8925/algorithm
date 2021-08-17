@@ -6,9 +6,10 @@ public class Main {
 
     public int[] solution(String str, char ch) {
         int[] answer = new int[str.length()];
-        int distance = 1000;
+        int strLen = str.length();
+        int distance = strLen; // 최대 길이
 
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < strLen; i++) {
             if (str.charAt(i) == ch) {
                 distance = 0;
             } else {
@@ -17,14 +18,15 @@ public class Main {
             answer[i] = distance;
         }
 
-        distance = 1000;
-        for (int i = str.length() - 1; i >= 0; i--) {
+        distance = strLen;
+
+        for (int i = strLen - 1; i >= 0; i--) {
             if (str.charAt(i) == ch) {
                 distance = 0;
             } else {
                 distance++;
-                answer[i] = Math.min(answer[i], distance);
             }
+            answer[i] = Math.min(distance, answer[i]);
         }
 
         return answer;
