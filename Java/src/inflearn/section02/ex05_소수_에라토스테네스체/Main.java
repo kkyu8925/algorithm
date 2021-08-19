@@ -9,6 +9,7 @@ public class Main {
         for (int i = 2; i <= n; i++) {
             if (arr[i] == 0) {
                 answer++;
+                // 소수를 찾았으면 소수의 배수를 전부 체크
                 for (int j = i; j <= n; j = j + i) {
                     arr[j] = 1;
                 }
