@@ -19,15 +19,18 @@ public class Main {
     }
 
     private List<Integer> solution(int n, int[] arr) {
+
         List<Integer> answer = new ArrayList<>();
 
         for (int num : arr) {
+            // 정수 뒤집기 start
             int res = 0;
             while (num > 0) {
                 int remainder = num % 10;
                 res = res * 10 + remainder;
                 num = num / 10;
             }
+            // 정수 뒤집기 end
 
             if (isPrime(res)) {
                 answer.add(res);
