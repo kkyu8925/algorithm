@@ -8,9 +8,11 @@ public class Main {
     private String solution(String a, String b) {
         String answer = "YES";
         Map<Character, Integer> rMap = new HashMap<>();
+
         for (char ch : a.toCharArray()) {
             rMap.put(ch, rMap.getOrDefault(ch, 0) + 1);
         }
+
         for (char ch : b.toCharArray()) {
             if (!rMap.containsKey(ch) || rMap.get(ch) == 0) {
                 return "NO";

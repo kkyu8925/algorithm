@@ -8,15 +8,16 @@ public class Main {
     private char solution(int n, String str) {
         char answer = ' ';
         Map<Character, Integer> rMap = new HashMap<>();
-        for (char ch : str.toCharArray()) {
-            rMap.put(ch, rMap.getOrDefault(ch, 0) + 1);
+
+        for (char c : str.toCharArray()) {
+            rMap.put(c, rMap.getOrDefault(c, 0) + 1);
         }
 
         int max = 0;
-        for (char key : rMap.keySet()) {
-            if (rMap.get(key) > max) {
-                max = rMap.get(key);
-                answer = key;
+        for (Character ch : rMap.keySet()) {
+            if (rMap.get(ch) > max) {
+                max = rMap.get(ch);
+                answer = ch;
             }
         }
 
