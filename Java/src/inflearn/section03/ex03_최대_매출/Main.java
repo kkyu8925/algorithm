@@ -6,6 +6,7 @@ public class Main {
     private int solution(int n, int k, int[] arr) {
         int answer;
         int sum = 0;
+
         for (int i = 0; i < k; i++) {
             sum += arr[i];
         }
