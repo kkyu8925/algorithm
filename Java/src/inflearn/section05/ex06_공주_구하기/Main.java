@@ -5,6 +5,25 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
+    private int solution2(int n, int k) {
+        int answer = 0;
+        Queue<Integer> que = new LinkedList<>();
+        for (int i = 1; i < n + 1; i++) {
+            que.offer(i);
+        }
+
+        while (!que.isEmpty()) {
+            for (int i = 1; i < k; i++) {
+                que.offer(que.poll());
+            }
+            que.poll();
+            if (que.size() == 1) {
+                answer = que.poll();
+            }
+        }
+        return answer;
+    }
+
     private int solution(int n, int k) {
         int answer = 0;
         Queue<Integer> que = new LinkedList<>();
@@ -22,25 +41,6 @@ public class Main {
                 que.offer(num);
             }
 
-            if (que.size() == 1) {
-                answer = que.poll();
-            }
-        }
-        return answer;
-    }
-
-    private int solution2(int n, int k) {
-        int answer = 0;
-        Queue<Integer> que = new LinkedList<>();
-        for (int i = 1; i < n + 1; i++) {
-            que.offer(i);
-        }
-
-        while (!que.isEmpty()) {
-            for (int i = 1; i < k; i++) {
-                que.offer(que.poll());
-            }
-            que.poll();
             if (que.size() == 1) {
                 answer = que.poll();
             }

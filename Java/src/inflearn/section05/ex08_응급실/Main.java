@@ -33,6 +33,7 @@ public class Main {
                 }
             }
 
+            // 제일 우선순위가 높은 환자라면
             if (person != null) {
                 answer++;
                 if (person.id == m) {
