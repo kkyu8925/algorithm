@@ -8,6 +8,7 @@ public class Main {
         int maxCnt = 0;
         for (int i = 1; i <= n; i++) {
             int cnt = 0;
+            // 다른 학생과 같은 반이었는지 체크
             for (int j = 1; j <= n; j++) {
                 for (int k = 1; k < 6; k++) {
                     if (arr[i][k] == arr[j][k]) {
