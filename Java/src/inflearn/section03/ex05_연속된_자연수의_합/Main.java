@@ -6,14 +6,15 @@ public class Main {
     private int solution(int n) {
         int answer = 0;
 
-        int m = n / 2 + 1;
+        int m = n / 2 + 1; // 15이면 7+8, 8까지만 등장가능
         int[] arr = new int[m];
+
+        // 배열 초기화
         for (int i = 0; i < m; i++) {
             arr[i] = i + 1;
         }
 
-        int lt = 0;
-        int sum = 0;
+        int sum = 0, lt = 0;
         for (int rt = 0; rt < m; rt++) {
             sum += arr[rt];
             if (sum == n) {
@@ -30,13 +31,18 @@ public class Main {
         return answer;
     }
 
+    // 수학적 방법
+    // 1부터 연속된 숫자를 할당하고 남은수가 할당된 숫자만큼 나누어 떨어지면 연속된 숫자
+    // n=15이고 1, 2, 3 일 때,  남은수 9는 3(1,2,3)으로 나누어 떨어지므로 4,5,6 연속된 숫자
     private int solution2(int n) {
         int answer = 0;
         int cnt = 1;
-        n--;
+        n = n - cnt;
+
         while (n > 0) {
             cnt++;
             n = n - cnt;
+
             if (n % cnt == 0) {
                 answer++;
             }
