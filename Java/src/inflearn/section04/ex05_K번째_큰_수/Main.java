@@ -7,8 +7,9 @@ import java.util.TreeSet;
 
 public class Main {
     private int solution(int[] arr, int n, int k) {
-        int answer = -1;
-        Set<Integer> rSet = new TreeSet<>(Collections.reverseOrder());
+        Set<Integer> rSet = new TreeSet<>(Collections.reverseOrder()); // 내림차순 정렬
+
+        // n에서 K개 뽑는 경우의 수
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 for (int l = j + 1; l < n; l++) {
@@ -20,9 +21,11 @@ public class Main {
         int cnt = 0;
         for (Integer integer : rSet) {
             cnt++;
-            if (cnt == k) return integer;
+            if (cnt == k) {
+                return integer;
+            }
         }
-        return answer;
+        return -1;
     }
 
     public static void main(String[] args) {
