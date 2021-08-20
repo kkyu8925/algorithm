@@ -6,6 +6,7 @@ public class Main {
     private List<Integer> solution(int n, int k, int[] arr) {
         List<Integer> answer = new ArrayList<>();
         Map<Integer, Integer> rMap = new HashMap<>();
+
         int lt = 0;
         for (int i = 0; i < k - 1; i++) {
             rMap.put(arr[i], rMap.getOrDefault(arr[i], 0) + 1);

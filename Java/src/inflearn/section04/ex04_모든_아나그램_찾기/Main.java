@@ -5,24 +5,29 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-    private int solution(String a, String b) {
+    private int solution(String a, String anagram) {
         int answer = 0;
-        Map<Character, Integer> compareMap = new HashMap<>();
-        for (char ch : b.toCharArray()) {
-            compareMap.put(ch, compareMap.getOrDefault(ch, 0) + 1);
+
+        // 아나그램 map 생성
+        Map<Character, Integer> anagramMap = new HashMap<>();
+        for (char ch : anagram.toCharArray()) {
+            anagramMap.put(ch, anagramMap.getOrDefault(ch, 0) + 1);
         }
 
         Map<Character, Integer> rMap = new HashMap<>();
-        for (int i = 0; i < b.length() - 1; i++) {
+        for (int i = 0; i < anagram.length() - 1; i++) {
             char key = a.charAt(i);
             rMap.put(key, rMap.getOrDefault(key, 0) + 1);
         }
 
         int lt = 0;
-        for (int rt = b.length() - 1; rt < a.length(); rt++) {
+        for (int rt = anagram.length() - 1; rt < a.length(); rt++) {
             char key = a.charAt(rt);
             rMap.put(key, rMap.getOrDefault(key, 0) + 1);
-            if (compareMap.equals(rMap)) answer++;
+
+            if (anagramMap.equals(rMap)) {
+                answer++;
+            }
 
             key = a.charAt(lt);
             rMap.put(key, rMap.get(key) - 1);
