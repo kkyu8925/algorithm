@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     private int solution(int n, int m, int[] arr) {
         int answer = 0;
-        int lt = Arrays.stream(arr).max().getAsInt();
+        int lt = Arrays.stream(arr).max().orElse(0);
         int rt = Arrays.stream(arr).sum();
 
         while (lt <= rt) {
