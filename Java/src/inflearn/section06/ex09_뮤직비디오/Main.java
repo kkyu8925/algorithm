@@ -22,17 +22,17 @@ public class Main {
     }
 
     private int count(int[] arr, int capacity) {
-        int answer = 1;
+        int cnt = 1;
         int sum = 0;
         for (int num : arr) {
             if (sum + num > capacity) {
-                answer++;
+                cnt++;
                 sum = num;
             } else {
                 sum += num;
             }
         }
-        return answer;
+        return cnt;
     }
 
     public static void main(String[] args) {
