@@ -7,6 +7,7 @@ public class Main {
         int[] cache = new int[size];
         for (int num : arr) {
             int idx = -1;
+            // cache hit
             for (int i = 0; i < size; i++) {
                 if (cache[i] == num) {
                     idx = i;
@@ -14,15 +15,16 @@ public class Main {
             }
 
             if (idx == -1) {
+                // cache miss
                 for (int i = size - 1; i > 0; i--) {
                     cache[i] = cache[i - 1];
                 }
             } else {
+                // cache hit
                 for (int i = idx; i > 0; i--) {
                     cache[i] = cache[i - 1];
                 }
             }
-
             cache[0] = num;
         }
         return cache;
