@@ -4,14 +4,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    private int solution(int n, int c, int[] arr) {
+    private int solution(int n, int horses, int[] arr) {
         int answer = 0;
+
+        // 이분검색은 정렬필수
         Arrays.sort(arr);
+
         int lt = 1;
         int rt = arr[n - 1];
         while (lt <= rt) {
             int dist = (lt + rt) / 2;
-            if (count(arr, dist) >= c) {
+            if (count(arr, dist) >= horses) {
                 answer = dist;
                 lt = dist + 1;
             } else {
@@ -22,15 +25,15 @@ public class Main {
     }
 
     private int count(int[] arr, int dist) {
-        int answer = 1;
+        int cnt = 1;
         int endPoint = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] - endPoint >= dist) {
-                answer++;
+                cnt++;
                 endPoint = arr[i];
             }
         }
-        return answer;
+        return cnt;
     }
 
     public static void main(String[] args) {
