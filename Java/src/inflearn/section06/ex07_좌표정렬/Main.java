@@ -12,6 +12,7 @@ class Point implements Comparable<Point> {
         this.y = y;
     }
 
+    // 정렬기준은 먼저 x값의 의해서 오름차순, x값이 같을 경우 y값에 의해 오름차순
     @Override
     public int compareTo(Point o) {
         if (this.x == o.x) {
