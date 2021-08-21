@@ -2,6 +2,9 @@ package inflearn.section06.ex02_버블정렬;
 
 import java.util.Scanner;
 
+/**
+ * 이웃한 숫자끼리 비교해서 큰 숫자를 뒤쪽으로 넘긴다.
+ */
 public class Main {
     private int[] solution(int n, int[] arr) {
         for (int i = 0; i < n - 1; i++) {
