@@ -7,6 +7,8 @@ public class Main {
         for (int i = 1; i < n; i++) {
             int tmp = arr[i];
             int j;
+            // tmp 가 가장 작은 수라면 j=-1 까지 이동
+            // tmp >= arr[j] 라면 중지
             for (j = i - 1; j >= 0 && tmp < arr[j]; j--) {
                 arr[j + 1] = arr[j];
             }
