@@ -7,8 +7,8 @@ import java.util.Scanner;
  */
 public class Main {
     private int[] solution(int n, int[] arr) {
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
+        for (int i = 0; i < n - 1; i++) { // 총 진행 횟수
+            for (int j = 0; j < n - 1 - i; j++) { // 이웃한 숫자끼리 비교
                 if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];
