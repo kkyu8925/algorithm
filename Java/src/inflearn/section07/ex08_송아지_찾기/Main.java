@@ -19,12 +19,17 @@ public class Main {
             for (int i = 0; i < len; i++) {
                 int current = que.poll();
 
-                if (current == arrival) {
-                    return L;
-                }
+//                if (current == arrival) {
+//                    return L;
+//                }
 
                 for (int dis : disArr) {
                     int next = current + dis;
+
+                    // 조금 더 나은 방법
+                    if (next == arrival) {
+                        return L + 1;
+                    }
 
                     if (!check.contains(next) && next > 0) {
                         check.add(next);
