@@ -30,6 +30,7 @@ public class Main {
                 if (current.lt != null) que.offer(current.lt);
                 if (current.rt != null) que.offer(current.rt);
             }
+
             L++;
             System.out.println();
         }
