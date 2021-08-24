@@ -21,14 +21,16 @@ public class Main {
 //            System.out.print(root.data + " ");
 //            DFS(root.lt);
 //            DFS(root.rt);
+
             // 중위 순회 : lt - root - rt
 //            DFS(root.lt);
 //            System.out.print(root.data + " ");
 //            DFS(root.rt);
+
             // 후위 순회 : lt - rt - root
             DFS(root.lt);
             DFS(root.rt);
-            System.out.print(root.data+" ");
+            System.out.print(root.data + " ");
         }
     }
 
