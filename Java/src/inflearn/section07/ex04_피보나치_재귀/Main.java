@@ -9,7 +9,7 @@ public class Main {
         }
 
         if (n < 2) {
-            return fi[n] = 1;
+            return fi[n] = n;
         } else {
             return fi[n] = memoization(n - 1) + memoization(n - 2);
         }
@@ -26,14 +26,18 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         int n = 10;
-//        for (int i = 1; i <= n; i++) {
-//            System.out.println(T.DFS(i));
-//        }
+
+        // recursive
+        for (int i = 1; i <= n; i++) {
+            System.out.println(T.DFS(i));
+        }
+
+        System.out.println("-----------");
 
         // memoization
         fi = new int[n + 1];
         T.memoization(n);
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println(fi[i]);
         }
     }
