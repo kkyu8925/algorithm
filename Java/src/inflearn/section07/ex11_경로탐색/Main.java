@@ -32,7 +32,12 @@ public class Main {
         for (int i = 0; i < E; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
+            // 단반향 그래프
             graph[a][b] = 1;
+
+            // 양반향 그래프
+//            graph[a][b] = 1;
+//            graph[b][a] = 1;
         }
         check[1] = 1;
         T.DFS(1);
