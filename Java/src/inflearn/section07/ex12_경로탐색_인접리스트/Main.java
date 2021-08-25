@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static int n, m, answer = 0;
+    // N-Node 개수, E-Edge 개수
+    static int N, E, answer = 0;
     static ArrayList<ArrayList<Integer>> graph;
     static int[] ch;
 
-    public void DFS(int v) {
-        if (v == n) {
+    public void DFS(int node) {
+        if (node == N) {
             answer++;
         } else {
-            for (int next : graph.get(v)) {
+            for (int next : graph.get(node)) {
                 if (ch[next] == 0) {
                     ch[next] = 1;
                     DFS(next);
@@ -25,14 +26,14 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
+        N = sc.nextInt();
+        E = sc.nextInt();
         graph = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i <= N; i++) {
             graph.add(new ArrayList<>());
         }
-        ch = new int[n + 1];
-        for (int i = 0; i < m; i++) {
+        ch = new int[N + 1];
+        for (int i = 0; i < E; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             graph.get(a).add(b);
