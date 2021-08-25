@@ -28,18 +28,25 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         E = sc.nextInt();
+
+        // graph 초기화
         graph = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
             graph.add(new ArrayList<>());
         }
-        ch = new int[N + 1];
+
         for (int i = 0; i < E; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             graph.get(a).add(b);
         }
+
+        ch = new int[N + 1];
+
+        // dfs start
         ch[1] = 1;
         T.DFS(1);
+
         System.out.println(answer);
     }
 }
