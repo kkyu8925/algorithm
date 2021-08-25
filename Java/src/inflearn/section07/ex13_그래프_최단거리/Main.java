@@ -6,15 +6,16 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
-    static int n, m;
+    static int N, E;
     static ArrayList<ArrayList<Integer>> graph;
     static int[] check, dis;
 
-    public void BFS(int v) {
+    public void BFS(int node) {
         Queue<Integer> que = new LinkedList<>();
-        check[v] = 1;
-        dis[v] = 0;
-        que.offer(v);
+        check[node] = 1;
+        dis[node] = 0;
+        que.offer(node);
+
         while (!que.isEmpty()) {
             int current = que.poll();
             for (int next : graph.get(current)) {
@@ -30,22 +31,27 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
+        N = sc.nextInt();
+        E = sc.nextInt();
+
+        // graph 초기화
         graph = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i <= N; i++) {
             graph.add(new ArrayList<>());
         }
-        check = new int[n + 1];
-        dis = new int[n + 1];
-        for (int i = 0; i < m; i++) {
+
+        for (int i = 0; i < E; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             graph.get(a).add(b);
         }
+
+        check = new int[N + 1];
+        dis = new int[N + 1];
+
         check[1] = 1;
         T.BFS(1);
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= N; i++) {
             System.out.println(i + " : " + dis[i]);
         }
     }
