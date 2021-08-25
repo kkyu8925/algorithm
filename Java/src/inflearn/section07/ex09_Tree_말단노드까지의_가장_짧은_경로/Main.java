@@ -10,8 +10,12 @@ class Node {
     }
 }
 
+/**
+ * 최단거리는 BFS 으로 해결
+ * DFS 자식 노드가 둘다 없거나 둘다 있어야 함
+ */
 public class Main {
-    Node root;
+    private Node root;
 
     private int DFS(int L, Node root) {
         if (root.lt == null && root.rt == null) {
