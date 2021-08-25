@@ -25,13 +25,17 @@ public class Main {
             int len = que.size();
             for (int i = 0; i < len; i++) {
                 Node current = que.poll();
-                if (current.lt == null && current.rt == null) return L;
+
+                if (current.lt == null && current.rt == null) {
+                    return L;
+                }
+
                 if (current.lt != null) que.offer(current.lt);
                 if (current.rt != null) que.offer(current.rt);
             }
             L++;
         }
-        return 0;
+        return -1;
     }
 
     public static void main(String[] args) {
