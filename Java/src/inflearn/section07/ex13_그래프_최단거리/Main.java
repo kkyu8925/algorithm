@@ -49,7 +49,6 @@ public class Main {
         check = new int[N + 1];
         dis = new int[N + 1];
 
-        check[1] = 1;
         T.BFS(1);
         for (int i = 2; i <= N; i++) {
             System.out.println(i + " : " + dis[i]);
