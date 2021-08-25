@@ -8,12 +8,12 @@ public class Main {
     static int[][] graph;
     static int[] check;
 
-    public void DFS(int Node) {
-        if (Node == N) {
+    public void DFS(int node) {
+        if (node == N) {
             answer++;
         } else {
             for (int i = 1; i <= N; i++) {
-                if (graph[Node][i] == 1 && check[i] == 0) {
+                if (graph[node][i] == 1 && check[i] == 0) {
                     check[i] = 1;
                     DFS(i);
                     check[i] = 0;
