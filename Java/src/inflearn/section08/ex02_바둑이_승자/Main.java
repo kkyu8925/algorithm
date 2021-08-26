@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     static int ANSWER = Integer.MIN_VALUE, MAX, N;
 
-    public void DFS(int L, int sum, int[] arr) {
+    public void dfs(int L, int sum, int[] arr) {
         if (sum > MAX) {
             return;
         }
@@ -13,8 +13,8 @@ public class Main {
         if (L == N) {
             ANSWER = Math.max(ANSWER, sum);
         } else {
-            DFS(L + 1, sum + arr[L], arr);
-            DFS(L + 1, sum, arr);
+            dfs(L + 1, sum + arr[L], arr);
+            dfs(L + 1, sum, arr);
         }
     }
 
@@ -29,7 +29,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        T.DFS(0, 0, arr);
+        T.dfs(0, 0, arr);
         System.out.println(ANSWER);
     }
 }
