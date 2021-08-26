@@ -3,36 +3,36 @@ package inflearn.section08.ex01_합이_같은_부분집합;
 import java.util.Scanner;
 
 public class Main {
-    static String answer = "NO";
-    static int n, total = 0;
-    boolean flag = false;
+    static String ANSWER = "NO";
+    static int N, TOTAL = 0;
+    boolean FLAG = false;
 
-    public void DFS(int L, int sum, int[] arr) {
-        if (flag || sum > total / 2) {
+    public void dfs(int L, int sum, int[] arr) {
+        if (FLAG || sum > TOTAL / 2) {
             return;
         }
 
-        if (L == n) {
-            if (total - sum == sum) {
-                answer = "YES";
-                flag = true;
+        if (L == N) {
+            if (TOTAL - sum == sum) {
+                ANSWER = "YES";
+                FLAG = true;
             }
         } else {
-            DFS(L + 1, sum + arr[L], arr);
-            DFS(L + 1, sum, arr);
+            dfs(L + 1, sum + arr[L], arr);
+            dfs(L + 1, sum, arr);
         }
     }
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
+        N = sc.nextInt();
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
-            total += arr[i];
+            TOTAL += arr[i];
         }
-        T.DFS(0, 0, arr);
-        System.out.println(answer);
+        T.dfs(0, 0, arr);
+        System.out.println(ANSWER);
     }
 }
