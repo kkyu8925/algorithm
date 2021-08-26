@@ -3,15 +3,15 @@ package inflearn.section08.ex02_바둑이_승자;
 import java.util.Scanner;
 
 public class Main {
-    static int answer = Integer.MIN_VALUE, c, n;
+    static int ANSWER = Integer.MIN_VALUE, MAX, N;
 
     public void DFS(int L, int sum, int[] arr) {
-        if (sum > c) {
+        if (sum > MAX) {
             return;
         }
 
-        if (L == n) {
-            answer = Math.max(answer, sum);
+        if (L == N) {
+            ANSWER = Math.max(ANSWER, sum);
         } else {
             DFS(L + 1, sum + arr[L], arr);
             DFS(L + 1, sum, arr);
@@ -21,13 +21,15 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        c = sc.nextInt();
-        n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
+        MAX = sc.nextInt();
+        N = sc.nextInt();
+
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
         }
+
         T.DFS(0, 0, arr);
-        System.out.println(answer);
+        System.out.println(ANSWER);
     }
 }
