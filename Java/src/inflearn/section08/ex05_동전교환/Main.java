@@ -5,18 +5,18 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-    static int n, m, answer = Integer.MAX_VALUE;
+    static int N, MAX, ANSWER = Integer.MAX_VALUE;
 
-    public void DFS(int L, int sum, Integer[] arr) {
-        if (sum > m || L >= answer) {
+    public void dfs(int L, int sum, Integer[] arr) {
+        if (sum > MAX || L >= ANSWER) {
             return;
         }
 
-        if (sum == m) {
-            answer = Math.min(answer, L);
+        if (sum == MAX) {
+            ANSWER = L;
         } else {
-            for (int i : arr) {
-                DFS(L + 1, sum + i, arr);
+            for (int coin : arr) {
+                dfs(L + 1, sum + coin, arr);
             }
         }
     }
@@ -24,14 +24,19 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        Integer[] arr = new Integer[n];
-        for (int i = 0; i < n; i++) {
+        N = sc.nextInt();
+
+        Integer[] arr = new Integer[N];
+        for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
         }
+        // 큰 금액 부터 계산하기 위해 정렬 - 시간복잡도 줄이기
+        // Collections.reverseOrder()은 기본형 사용 불가능
         Arrays.sort(arr, Collections.reverseOrder());
-        m = sc.nextInt();
-        T.DFS(0, 0, arr);
-        System.out.println(answer);
+
+        MAX = sc.nextInt();
+
+        T.dfs(0, 0, arr);
+        System.out.println(ANSWER);
     }
 }
