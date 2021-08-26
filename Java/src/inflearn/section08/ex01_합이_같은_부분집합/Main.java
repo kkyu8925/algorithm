@@ -27,11 +27,13 @@ public class Main {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
+
         int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
             TOTAL += arr[i];
         }
+
         T.dfs(0, 0, arr);
         System.out.println(ANSWER);
     }
