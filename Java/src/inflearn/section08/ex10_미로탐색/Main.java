@@ -3,22 +3,22 @@ package inflearn.section08.ex10_미로탐색;
 import java.util.Scanner;
 
 public class Main {
-    static int[] dx = {-1, 0, 1, 0};
-    static int[] dy = {0, 1, 0, -1};
-    static int[][] board;
-    static int answer = 0;
+    static int[] DX = {-1, 0, 1, 0};
+    static int[] DY = {0, 1, 0, -1};
+    static int[][] BOARD;
+    static int ANSWER = 0;
 
-    private void DFS(int x, int y) {
+    private void dfs(int x, int y) {
         if (x == 7 && y == 7) {
-            answer++;
+            ANSWER++;
         } else {
             for (int i = 0; i < 4; i++) {
-                int nextX = x + dx[i];
-                int nextY = y + dy[i];
-                if (nextX >= 1 && nextY <= 7 && nextY >= 1 && nextX <= 7 && board[nextX][nextY] == 0) {
-                    board[nextX][nextY] = 1;
-                    DFS(nextX, nextY);
-                    board[nextX][nextY] = 0;
+                int nextX = x + DX[i];
+                int nextY = y + DY[i];
+                if (nextX >= 1 && nextY <= 7 && nextY >= 1 && nextX <= 7 && BOARD[nextX][nextY] == 0) {
+                    BOARD[nextX][nextY] = 1;
+                    dfs(nextX, nextY);
+                    BOARD[nextX][nextY] = 0;
                 }
             }
         }
@@ -27,14 +27,15 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        board = new int[8][8];
+        BOARD = new int[8][8];
         for (int i = 1; i < 8; i++) {
             for (int j = 1; j < 8; j++) {
-                board[i][j] = sc.nextInt();
+                BOARD[i][j] = sc.nextInt();
             }
         }
-        board[1][1] = 1;
-        T.DFS(1, 1);
-        System.out.println(answer);
+
+        BOARD[1][1] = 1;
+        T.dfs(1, 1);
+        System.out.println(ANSWER);
     }
 }
