@@ -14,25 +14,32 @@ class Point {
 }
 
 public class Main {
-    static int n, m, len, answer = Integer.MAX_VALUE;
-    static int[] combination;
-    static List<Point> pizza, house;
+    static int N; // 행, 열
+    static int M; // M개의 피자집을 선택
+    static int PIZZA_LEN, ANSWER = Integer.MAX_VALUE;
+    static int[] COMBINATION;
+    static List<Point> PIZZA, HOME;
 
-    public void DFS(int L, int s) {
-        if (L == m) {
+    public void dfs(int L, int start) {
+        if (L == M) {
             int sum = 0;
-            for (Point h : house) {
+            for (Point h : HOME) {
+                // 모든 집들과 뽑힌 피자가게중에서 최소 피자배달거리를 구한다.
                 int dis = Integer.MAX_VALUE;
-                for (int idx : combination) {
-                    dis = Math.min(dis, Math.abs(h.x - pizza.get(idx).x) + Math.abs(h.y - pizza.get(idx).y));
+                for (int idx : COMBINATION) {
+                    // 집과 피자집의 피자배달거리는 |x1-x2|+|y1-y2| 이다.
+                    dis = Math.min(dis, Math.abs(h.x - PIZZA.get(idx).x) + Math.abs(h.y - PIZZA.get(idx).y));
                 }
-                sum = sum + dis;
+                sum = sum + dis; // 도시의 피자배달거리
             }
-            answer = Math.min(answer, sum);
+            // 도시의 피자배달거리 중에서 최소 피자배달거리
+            ANSWER = Math.min(ANSWER, sum);
         } else {
-            for (int i = s; i < len; i++) {
-                combination[L] = i;
-                DFS(L + 1, i + 1);
+            // combination
+            // section08-ex09_조합_구하기 참고
+            for (int i = start; i < PIZZA_LEN; i++) {
+                COMBINATION[L] = i;
+                dfs(L + 1, i + 1);
             }
         }
     }
@@ -40,23 +47,28 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
-        pizza = new ArrayList<>();
-        house = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        N = sc.nextInt(); // 행, 열
+        M = sc.nextInt();
+        PIZZA = new ArrayList<>();
+        HOME = new ArrayList<>();
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 int tmp = sc.nextInt();
                 if (tmp == 1) {
-                    house.add(new Point(i, j));
+                    // 1 - 집
+                    HOME.add(new Point(i, j));
                 } else if (tmp == 2) {
-                    pizza.add(new Point(i, j));
+                    // 2 - 피자가게
+                    PIZZA.add(new Point(i, j));
                 }
             }
         }
-        len = pizza.size();
-        combination = new int[m];
-        T.DFS(0, 0);
-        System.out.println(answer);
+
+        PIZZA_LEN = PIZZA.size();
+        COMBINATION = new int[M];
+
+        T.dfs(0, 0);
+        System.out.println(ANSWER);
     }
 }
