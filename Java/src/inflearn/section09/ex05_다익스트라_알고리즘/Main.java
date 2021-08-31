@@ -18,26 +18,27 @@ class Edge implements Comparable<Edge> {
 }
 
 public class Main {
-    static int n, m;
-    static List<ArrayList<Edge>> graph;
-    static int[] dis;
+    static int N, M; // N-정점의 개수, M-간선의 개수
+    static List<ArrayList<Edge>> GRAPH;
+    static int[] DIS;
 
     private void solution(int v) {
         PriorityQueue<Edge> pQ = new PriorityQueue<>();
         pQ.offer(new Edge(v, 0));
-        dis[v] = 0;
+        DIS[v] = 0;
         while (!pQ.isEmpty()) {
             Edge now = pQ.poll();
             int nowVex = now.vex;
             int nowCost = now.cost;
 
-            if (nowCost > dis[nowVex]) {
+            // 시간복잡도 해결
+            if (nowCost > DIS[nowVex]) {
                 continue;
             }
 
-            for (Edge edge : graph.get(nowVex)) {
-                if (dis[edge.vex] > nowCost + edge.cost) {
-                    dis[edge.vex] = nowCost + edge.cost;
+            for (Edge edge : GRAPH.get(nowVex)) {
+                if (DIS[edge.vex] > nowCost + edge.cost) {
+                    DIS[edge.vex] = nowCost + edge.cost;
                     pQ.offer(new Edge(edge.vex, nowCost + edge.cost));
                 }
             }
@@ -47,24 +48,31 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
-        graph = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<>());
+        N = sc.nextInt();
+        M = sc.nextInt();
+
+        // 가중치 그래프 생성
+        GRAPH = new ArrayList<>();
+        for (int i = 0; i < N + 1; i++) {
+            GRAPH.add(new ArrayList<>());
         }
-        dis = new int[n + 1];
-        Arrays.fill(dis, Integer.MAX_VALUE);
-        for (int i = 0; i < m; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-            graph.get(a).add(new Edge(b, c));
+
+        DIS = new int[N + 1];
+        Arrays.fill(DIS, Integer.MAX_VALUE);
+
+        // 가중치 그래프 입력
+        for (int i = 0; i < M; i++) {
+            int start = sc.nextInt();
+            int end = sc.nextInt();
+            int weight = sc.nextInt();
+            GRAPH.get(start).add(new Edge(end, weight));
         }
+
         T.solution(1);
-        for (int i = 2; i <= n; i++) {
-            if (dis[1] != Integer.MAX_VALUE) {
-                System.out.println(i + " : " + dis[i]);
+
+        for (int i = 2; i <= N; i++) {
+            if (DIS[1] != Integer.MAX_VALUE) {
+                System.out.println(i + " : " + DIS[i]);
             } else {
                 System.out.println(i + " : impossible");
             }
