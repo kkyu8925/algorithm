@@ -17,10 +17,10 @@ class Body implements Comparable<Body> {
 }
 
 public class Main {
-    private int solution(List<Body> arr, int n) {
+    private int solution(List<Body> arr) {
         int answer = 0;
         Collections.sort(arr);
-        int max = Integer.MIN_VALUE;
+        int max = 0;
         for (Body body : arr) {
             if (body.weight > max) {
                 answer++;
@@ -40,6 +40,6 @@ public class Main {
             int w = sc.nextInt();
             arr.add(new Body(h, w));
         }
-        System.out.println(T.solution(arr, n));
+        System.out.println(T.solution(arr));
     }
 }
