@@ -70,8 +70,8 @@ public class Main {
 
         T.solution(1);
 
-        for (int i = 2; i <= N; i++) {
-            if (DIS[1] != Integer.MAX_VALUE) {
+        for (int i = 2; i < N + 1; i++) {
+            if (DIS[i] != Integer.MAX_VALUE) {
                 System.out.println(i + " : " + DIS[i]);
             } else {
                 System.out.println(i + " : impossible");
