@@ -15,13 +15,16 @@ class Time implements Comparable<Time> {
 
     @Override
     public int compareTo(Time o) {
-        if (this.end == o.end) return this.start - o.end;
-        else return this.end - o.end;
+        if (this.end == o.end) {
+            return this.start - o.end;
+        } else {
+            return this.end - o.end;
+        }
     }
 }
 
 public class Main {
-    private int solution(List<Time> arr, int n) {
+    private int solution(List<Time> arr) {
         int answer = 0;
         Collections.sort(arr);
         int endTime = 0;
@@ -44,6 +47,6 @@ public class Main {
             int end = sc.nextInt();
             arr.add(new Time(start, end));
         }
-        System.out.println(T.solution(arr, n));
+        System.out.println(T.solution(arr));
     }
 }
