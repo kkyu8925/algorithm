@@ -23,13 +23,13 @@ class Edge implements Comparable<Edge> {
 }
 
 public class Main {
-    static int[] unf;
+    static int[] UNF;
 
     private static int find(int v) {
-        if (v == unf[v]) {
+        if (v == UNF[v]) {
             return v;
         } else {
-            return unf[v] = find(unf[v]);
+            return UNF[v] = find(UNF[v]);
         }
     }
 
@@ -37,7 +37,7 @@ public class Main {
         int fa = find(a);
         int fb = find(b);
         if (fa != fb) {
-            unf[fa] = fb;
+            UNF[fa] = fb;
         }
     }
 
@@ -45,22 +45,27 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        unf = new int[n + 1];
+
+        UNF = new int[n + 1];
         List<Edge> arr = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            unf[i] = i;
+        for (int i = 1; i < n + 1; i++) {
+            UNF[i] = i;
         }
+
         for (int i = 0; i < m; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-            arr.add(new Edge(a, b, c));
+            int v1 = sc.nextInt();
+            int v2 = sc.nextInt();
+            int weight = sc.nextInt();
+            arr.add(new Edge(v1, v2, weight));
         }
+
         int answer = 0;
         Collections.sort(arr);
+
         for (Edge edge : arr) {
             int fv1 = find(edge.v1);
             int fv2 = find(edge.v2);
+            // 서로소일 때만 선택
             if (fv1 != fv2) {
                 answer += edge.cost;
                 union(edge.v1, edge.v2);
