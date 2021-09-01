@@ -36,10 +36,10 @@ public class Main {
                 continue;
             }
 
-            for (Edge edge : GRAPH.get(nowVex)) {
-                if (DIS[edge.vex] > nowCost + edge.cost) {
-                    DIS[edge.vex] = nowCost + edge.cost;
-                    pQ.offer(new Edge(edge.vex, nowCost + edge.cost));
+            for (Edge next : GRAPH.get(nowVex)) {
+                if (DIS[next.vex] > nowCost + next.cost) {
+                    DIS[next.vex] = nowCost + next.cost;
+                    pQ.offer(new Edge(next.vex, nowCost + next.cost));
                 }
             }
         }
