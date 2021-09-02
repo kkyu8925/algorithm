@@ -3,6 +3,7 @@ package inflearn.section10.ex04_가장_높은_탑_쌓기;
 import java.util.*;
 
 class Brick implements Comparable<Brick> {
+    // s-넓이, h-높이, w-무게
     int s, h, w;
 
     public Brick(int s, int h, int w) {
@@ -13,29 +14,27 @@ class Brick implements Comparable<Brick> {
 
     @Override
     public int compareTo(Brick o) {
-        return o.s - this.s;
+        return o.s - this.s; // 내림차순
     }
 }
 
 public class Main {
-    static int[] dy;
+    static int[] DY;
 
-    private int solution(Brick[] arr) {
-        int answer = 0;
-        Arrays.sort(arr);
-        dy[0] = arr[0].h;
-        answer = dy[0];
-        for (int i = 1; i < arr.length; i++) {
+    private int solution(Brick[] bricks) {
+        Arrays.sort(bricks);
+        DY[0] = bricks[0].h;
+        for (int i = 1; i < bricks.length; i++) {
             int max_h = 0;
             for (int j = i - 1; j >= 0; j--) {
-                if (arr[i].w < arr[j].w && dy[j] > max_h) {
-                    max_h = dy[j];
+                // 무게가 가벼워면서 최대값.
+                if (bricks[i].w < bricks[j].w && DY[j] > max_h) {
+                    max_h = DY[j];
                 }
             }
-            dy[i] = max_h + arr[i].h;
-            answer = Math.max(answer, dy[i]);
+            DY[i] = max_h + bricks[i].h;
         }
-        return answer;
+        return Arrays.stream(DY).max().getAsInt();
     }
 
     public static void main(String[] args) {
@@ -43,7 +42,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         Brick[] arr = new Brick[n];
-        dy = new int[n];
+        DY = new int[n];
         for (int i = 0; i < n; i++) {
             int s = sc.nextInt();
             int h = sc.nextInt();
