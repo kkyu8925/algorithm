@@ -13,6 +13,9 @@ public class Main {
         Arrays.fill(DY, Integer.MAX_VALUE);
         DY[0] = 0;
         for (int coin : coins) {
+            /*
+             동전이 무한하면 앞에서부터 반복
+             */
             for (int j = coin; j <= MONEY; j++) {
                 // 예를 들어, 5원이 들어오면 5-5=0, dy[0]=0+1 > 5원 동전 하나만 걸러주면 된다.
                 // 목표금액까지 반복
