@@ -29,12 +29,12 @@ public class Main {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        int[] coins = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            coins[i] = sc.nextInt();
         }
         MONEY = sc.nextInt();
         DY = new int[MONEY + 1];
-        System.out.println(T.solution(arr));
+        System.out.println(T.solution(coins));
     }
 }
