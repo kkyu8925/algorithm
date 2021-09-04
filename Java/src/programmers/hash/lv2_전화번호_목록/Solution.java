@@ -1,4 +1,4 @@
-package programmers.lv2.전화번호목록;
+package programmers.hash.lv2_전화번호_목록;
 
 import java.util.Arrays;
 
