@@ -1,4 +1,4 @@
-package programmers.lv2.주식가격;
+package programmers.stackque.lv2_주식가격;
 
 class Solution {
     public int[] solution(int[] prices) {
