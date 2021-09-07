@@ -14,8 +14,8 @@ class Solution {
             queue.offer(day);
         }
 
-        int prev = queue.poll();
         int count = 1;
+        int prev = queue.poll();
 
         while (!queue.isEmpty()) {
             int now = queue.poll();
