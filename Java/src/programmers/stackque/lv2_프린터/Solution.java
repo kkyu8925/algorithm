@@ -14,7 +14,6 @@ class Solution {
         }
 
         while (!pq.isEmpty()) {
-
             for (int i = 0; i < priorities.length; i++) {
                 if (pq.peek() == priorities[i]) {
                     pq.poll();
@@ -24,8 +23,6 @@ class Solution {
                         break;
                     }
                 }
-
-
             }
         }
         return answer;
