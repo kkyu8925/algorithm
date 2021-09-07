@@ -2,16 +2,14 @@ package programmers.stackque.lv2_주식가격;
 
 class Solution {
     public int[] solution(int[] prices) {
-        int[] answer = new int[prices.length];
+        int len = prices.length;
+        int[] answer = new int[len];
 
-        for (int i = 0; i < answer.length; i++) {
-            for (int j = i+1; j < answer.length; j++) {
+        for (int i = 0; i < len; i++) {
+            for (int j = i + 1; j < len; j++) {
+                answer[i]++;
                 if (prices[i] > prices[j]) {
-                    answer[i] = j-i;
                     break;
-                }
-                if (j==answer.length-1){
-                    answer[i] = j-i;
                 }
             }
         }
