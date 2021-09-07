@@ -34,9 +34,7 @@ class Solution {
             answer++;
 
             if (moveQ.isEmpty()) {
-                Truck truck = waitQ.poll();
-                currentWeight += truck.weight;
-                moveQ.offer(truck);
+                currentWeight = getCurrentWeight(waitQ, moveQ, currentWeight);
                 continue;
             }
 
@@ -50,12 +48,17 @@ class Solution {
             }
 
             if (!waitQ.isEmpty() && currentWeight + waitQ.peek().weight <= weight) {
-                Truck truck = waitQ.poll();
-                currentWeight += truck.weight;
-                moveQ.offer(truck);
+                currentWeight = getCurrentWeight(waitQ, moveQ, currentWeight);
             }
         }
 
         return answer;
+    }
+
+    private int getCurrentWeight(Queue<Truck> waitQ, Queue<Truck> moveQ, int currentWeight) {
+        Truck truck = waitQ.poll();
+        currentWeight += truck.weight;
+        moveQ.offer(truck);
+        return currentWeight;
     }
 }
