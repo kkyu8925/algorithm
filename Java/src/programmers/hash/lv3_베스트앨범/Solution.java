@@ -20,7 +20,7 @@ class Music implements Comparable<Music> {
 class Solution {
     public int[] solution(String[] genres, int[] plays) {
 
-        List<Integer> answer = new ArrayList<>();
+        List<Integer> rList = new ArrayList<>();
         HashMap<String, List<Music>> listMap = new HashMap<>();
         HashMap<String, Integer> totalPlay = new HashMap<>();
 
@@ -51,7 +51,7 @@ class Solution {
 
             int cnt = 0;
             for (Music music : musicList) {
-                answer.add(music.id);
+                rList.add(music.id);
                 cnt++;
                 if (cnt == 2) {
                     break;
@@ -59,7 +59,13 @@ class Solution {
             }
         }
 
-        return answer.stream().mapToInt(i -> i).toArray();
+        int[] answer = new int[rList.size()];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = rList.get(i);
+        }
+
+        return answer;
     }
 
     public static void main(String[] args) {
