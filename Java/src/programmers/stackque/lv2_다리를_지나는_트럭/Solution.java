@@ -22,8 +22,8 @@ class Solution {
         Queue<Truck> waitQ = new LinkedList<>();
         Queue<Truck> moveQ = new LinkedList<>();
 
-        for (int t : truck_weights) {
-            waitQ.offer(new Truck(t));
+        for (int truck_weight : truck_weights) {
+            waitQ.offer(new Truck(truck_weight));
         }
 
         int answer = 0;
