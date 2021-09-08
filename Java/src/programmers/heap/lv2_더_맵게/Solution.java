@@ -1,9 +1,10 @@
-package programmers.lv2.더맵게;
+package programmers.heap.lv2_더_맵게;
 
 import java.util.PriorityQueue;
 
 class Solution {
     public int solution(int[] scoville, int K) {
+
         int answer = 0;
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
@@ -13,9 +14,11 @@ class Solution {
         }
 
         while (pq.peek() < K) {
+
             if (pq.size() == 1) {
                 return -1;
             }
+
             int one = pq.poll();
             int two = pq.poll();
 
