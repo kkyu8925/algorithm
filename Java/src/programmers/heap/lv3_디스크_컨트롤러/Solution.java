@@ -17,7 +17,7 @@ class Solution {
         int i = 0;
         while (cnt < jobs.length) {
             while (i < jobs.length && jobs[i][0] <= nowTime) {
-                queue.add(jobs[i++]);
+                queue.offer(jobs[i++]);
             }
 
             if (!queue.isEmpty()) {
