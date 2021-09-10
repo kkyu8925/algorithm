@@ -17,7 +17,6 @@ class Solution {
             return "0";
         }
 
-
         return String.join("", strArr);
     }
 }
