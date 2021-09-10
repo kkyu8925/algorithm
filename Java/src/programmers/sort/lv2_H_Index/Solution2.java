@@ -1,4 +1,4 @@
-package programmers.lv2.H_Index;
+package programmers.sort.lv2_H_Index;
 
 import java.util.Arrays;
 

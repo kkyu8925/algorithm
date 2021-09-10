@@ -1,4 +1,4 @@
-package programmers.lv2.가장_큰_수;
+package programmers.sort.lv2_가장_큰_수;
 
 import java.util.Arrays;
 
