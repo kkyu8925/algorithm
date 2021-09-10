@@ -1,4 +1,4 @@
-package programmers.lv2.소수찾기;
+package programmers.exhaustive_search.lv2_소수찾기;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,13 +10,11 @@ class Solution {
         HashSet<Integer> set = new HashSet<>();
         perm("", numbers, set);
 
-        Iterator<Integer> it = set.iterator();
-        while (it.hasNext()) {
-            int a = it.next();
-            if (a == 2) {
+        for (int num : set) {
+            if (num == 2) {
                 answer++;
             }
-            if (a % 2 != 0 && isPrime(a)) {
+            if (num % 2 != 0 && isPrime(num)) {
                 answer++;
             }
         }
@@ -42,7 +40,5 @@ class Solution {
         for (int i = 0; i < str.length(); i++) {
             perm(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1), set);
         }
-
     }
-
 }

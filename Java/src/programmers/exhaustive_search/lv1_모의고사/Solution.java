@@ -1,4 +1,4 @@
-package programmers.lv1.모의고사;
+package programmers.exhaustive_search.lv1_모의고사;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 class Solution {
 	public static int[] solution(int[] answers) {
-		int[] answer = {};
+		int[] answer;
 		int[] arr1 = { 1, 2, 3, 4, 5 };
 		int[] arr2 = { 2, 1, 2, 3, 2, 4, 2, 5 };
 		int[] arr3 = { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 };
@@ -25,9 +25,9 @@ class Solution {
 		}
 
 		int max = cnt[0];
-		for (int i = 0; i < cnt.length; i++) {
-			if (max < cnt[i]) {
-				max = cnt[i];
+		for (int j : cnt) {
+			if (max < j) {
+				max = j;
 			}
 		}
 
