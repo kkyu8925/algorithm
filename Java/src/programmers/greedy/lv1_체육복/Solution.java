@@ -1,4 +1,4 @@
-package programmers.lv1.체육복;
+package programmers.greedy.lv1_체육복;
 
 class Solution {
 	public static int solution(int n, int[] lost, int[] reserve) {

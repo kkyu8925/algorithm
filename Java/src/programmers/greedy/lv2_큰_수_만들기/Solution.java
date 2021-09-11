@@ -1,4 +1,4 @@
-package programmers.lv2.큰_수_만들기;
+package programmers.greedy.lv2_큰_수_만들기;
 
 import java.util.Stack;
 

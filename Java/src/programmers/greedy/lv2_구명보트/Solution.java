@@ -1,4 +1,4 @@
-package programmers.lv2.구명보트;
+package programmers.greedy.lv2_구명보트;
 
 import java.util.Arrays;
 

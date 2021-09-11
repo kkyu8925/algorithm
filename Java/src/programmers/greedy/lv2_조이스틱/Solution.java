@@ -1,4 +1,4 @@
-package programmers.lv2.조이스틱;
+package programmers.greedy.lv2_조이스틱;
 
 class Solution {
     public int solution(String name) {
