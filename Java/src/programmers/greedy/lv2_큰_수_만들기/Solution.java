@@ -14,14 +14,15 @@ class Solution {
             }
             stack.push(c);
         }
+
         for (int i = 0; i < result.length; i++) {
             result[i] = stack.get(i);
         }
+
         return new String(result);
     }
 
     public static void main(String[] args) {
-
         Solution s = new Solution();
         s.solution("4177252841", 4);
     }
