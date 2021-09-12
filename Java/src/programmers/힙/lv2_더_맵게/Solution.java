@@ -1,4 +1,4 @@
-package programmers.heap.lv2_더_맵게;
+package programmers.힙.lv2_더_맵게;
 
 import java.util.PriorityQueue;
 

@@ -1,4 +1,4 @@
-package programmers.heap.lv3_디스크_컨트롤러;
+package programmers.힙.lv3_디스크_컨트롤러;
 
 import java.util.*;
 

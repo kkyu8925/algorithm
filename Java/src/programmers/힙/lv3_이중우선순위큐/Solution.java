@@ -1,4 +1,4 @@
-package programmers.heap.lv3_이중우선순위큐;
+package programmers.힙.lv3_이중우선순위큐;
 
 import java.util.Arrays;
 import java.util.Collections;
