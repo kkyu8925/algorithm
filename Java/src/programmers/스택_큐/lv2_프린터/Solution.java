@@ -1,4 +1,4 @@
-package programmers.stack_que.lv2_프린터;
+package programmers.스택_큐.lv2_프린터;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
