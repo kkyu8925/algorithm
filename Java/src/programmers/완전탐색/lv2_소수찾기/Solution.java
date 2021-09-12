@@ -1,7 +1,6 @@
-package programmers.exhaustive_search.lv2_소수찾기;
+package programmers.완전탐색.lv2_소수찾기;
 
 import java.util.HashSet;
-import java.util.Iterator;
 
 class Solution {
 

@@ -1,4 +1,4 @@
-package programmers.exhaustive_search.lv1_모의고사;
+package programmers.완전탐색.lv1_모의고사;
 
 import java.util.ArrayList;
 import java.util.Arrays;

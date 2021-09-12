@@ -1,4 +1,4 @@
-package programmers.exhaustive_search.lv2_카펫;
+package programmers.완전탐색.lv2_카펫;
 
 class Solution {
     public static int[] solution(int brown, int yellow) {
