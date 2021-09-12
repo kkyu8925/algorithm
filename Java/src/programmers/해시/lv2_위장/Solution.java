@@ -1,4 +1,4 @@
-package programmers.hash.lv2_위장;
+package programmers.해시.lv2_위장;
 
 import java.util.HashMap;
 

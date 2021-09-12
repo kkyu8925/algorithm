@@ -1,4 +1,4 @@
-package programmers.hash.lv3_베스트앨범;
+package programmers.해시.lv3_베스트앨범;
 
 import java.util.*;
 
