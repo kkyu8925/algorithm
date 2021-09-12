@@ -1,4 +1,4 @@
-package programmers.stackque.lv2_기능개발;
+package programmers.stack_que.lv2_기능개발;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

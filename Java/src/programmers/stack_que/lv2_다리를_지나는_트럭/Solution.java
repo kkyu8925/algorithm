@@ -1,4 +1,4 @@
-package programmers.stackque.lv2_다리를_지나는_트럭;
+package programmers.stack_que.lv2_다리를_지나는_트럭;
 
 import java.util.*;
 
