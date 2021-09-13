@@ -1,4 +1,4 @@
-package programmers.sort.lv1_K번째수;
+package programmers.정렬.lv1_K번째수;
 
 import java.util.Arrays;
 
