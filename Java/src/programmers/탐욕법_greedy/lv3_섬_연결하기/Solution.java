@@ -1,4 +1,4 @@
-package programmers.greedy.lv3_섬_연결하기;
+package programmers.탐욕법_greedy.lv3_섬_연결하기;
 
 import java.util.ArrayList;
 import java.util.List;
