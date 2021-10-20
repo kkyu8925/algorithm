@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public String solution(String str) {
         String answer = "";
-        int max = Integer.MIN_VALUE;
+        int max = 0;
 
         String[] words = str.split(" ");
 
@@ -22,7 +22,6 @@ public class Main {
 
     public static void main(String[] args) {
         Main T = new Main();
-
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         System.out.println(T.solution(str));

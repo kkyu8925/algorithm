@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public List<String> solution(int num, String[] strArr) {
+    public List<String> solution(String[] strArr) {
         List<String> answer = new ArrayList<>();
-
         for (String str : strArr) {
             String res = new StringBuilder(str).reverse().toString();
             answer.add(res);
@@ -26,7 +25,7 @@ public class Main {
             strArr[i] = sc.next();
         }
 
-        for (String ans : T.solution(num, strArr)) {
+        for (String ans : T.solution(strArr)) {
             System.out.println(ans);
         }
     }
