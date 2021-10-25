@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public String solution(String str) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         str = str + " "; // 마지막 글자도 확인을 위해 공백 추가
         int cnt = 1;
 
@@ -13,17 +13,18 @@ public class Main {
             if (str.charAt(i) == str.charAt(i + 1)) {
                 cnt++;
             } else {
-                answer += str.charAt(i);
+                answer.append(str.charAt(i));
 
                 if (cnt > 1) {
-                    answer += String.valueOf(cnt);
+                    // 덧셈 연사자를 진행할때 연산자중 한 쪽이 String 형이면 나머지 쪽을 String 형태로 변환
+                    answer.append(cnt);
                 }
 
                 cnt = 1;
             }
         }
 
-        return answer;
+        return answer.toString();
     }
 
     public static void main(String[] args) {
