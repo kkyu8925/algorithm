@@ -15,27 +15,33 @@ public class Main {
                 return false;
             }
         }
+
         return true;
     }
 
-    private List<Integer> solution(int n, int[] arr) {
+    private int getReverseNumber(int num) {
+        int res = 0;
 
+        while (num > 0) {
+            int remainder = num % 10;
+            res = res * 10 + remainder;
+            num = num / 10;
+        }
+
+        return res;
+    }
+
+    private List<Integer> solution(int[] arr) {
         List<Integer> answer = new ArrayList<>();
 
         for (int num : arr) {
-            // 정수 뒤집기 start
-            int res = 0;
-            while (num > 0) {
-                int remainder = num % 10;
-                res = res * 10 + remainder;
-                num = num / 10;
-            }
-            // 정수 뒤집기 end
+            int res = getReverseNumber(num);
 
             if (isPrime(res)) {
                 answer.add(res);
             }
         }
+
         return answer;
     }
 
@@ -49,7 +55,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        for (int x : T.solution(n, arr)) {
+        for (int x : T.solution(arr)) {
             System.out.print(x + " ");
         }
     }

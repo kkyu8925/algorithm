@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class Main {
     private String solution(int n, int[] a, int[] b) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         for (int i = 0; i < n; i++) {
             if (a[i] == b[i]) {
-                answer += "D";
+                answer.append("D");
             } else if (a[i] == 1 && b[i] == 3) {
-                answer += "A";
+                answer.append("A");
             } else if (a[i] == 2 && b[i] == 1) {
-                answer += "A";
+                answer.append("A");
             } else if (a[i] == 3 && b[i] == 2) {
-                answer += "A";
+                answer.append("A");
             } else {
-                answer += "B";
+                answer.append("B");
             }
         }
-        return answer;
+        return answer.toString();
     }
 
     public static void main(String[] args) {

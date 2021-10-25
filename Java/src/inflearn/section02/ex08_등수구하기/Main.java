@@ -5,15 +5,19 @@ import java.util.Scanner;
 public class Main {
     private int[] solution(int n, int[] arr) {
         int[] answer = new int[n];
+
         for (int i = 0; i < n; i++) {
             int cnt = 1;
+
             for (int num : arr) {
                 if (arr[i] < num) {
                     cnt++;
                 }
             }
+
             answer[i] = cnt;
         }
+
         return answer;
     }
 

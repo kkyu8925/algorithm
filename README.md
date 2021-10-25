@@ -18,18 +18,18 @@
 
 <details>
     <summary>Array</summary>
-        <a href="">[인프런(자바코테) 2-1] 문자 찾기</a><br/>
-        <a href="">[인프런(자바코테) 2-2] 보이는 학생</a><br/>
-        <a href="">[인프런(자바코테) 2-3] 가위바위보</a><br/>
-        <a href="">[인프런(자바코테) 2-4] 피보나치 수열</a><br/>
-        <a href="">[인프런(자바코테) 2-5] 소수(에라토스테네스 체)</a><br/>
-        <a href="">[인프런(자바코테) 2-6] 뒤집은 소수</a><br/>
-        <a href="">[인프런(자바코테) 2-7] 점수계산</a><br/>
-        <a href="">[인프런(자바코테) 2-8] 등수구하기</a><br/>
-        <a href="">[인프런(자바코테) 2-9] 격자판 최대합</a><br/>
-        <a href="">[인프런(자바코테) 2-10] 봉우리</a><br/>
-        <a href="">[인프런(자바코테) 2-11] 임시반장정하기</a><br/>
-        <a href="">[인프런(자바코테) 2-12] 멘토링</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex01_%ED%81%B0_%EC%88%98_%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 2-1] 문자 찾기</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex02_%EB%B3%B4%EC%9D%B4%EB%8A%94_%ED%95%99%EC%83%9D/Main.java">[인프런(자바코테) 2-2] 보이는 학생</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex03_%EA%B0%80%EC%9C%84_%EB%B0%94%EC%9C%84_%EB%B3%B4/Main.java">[인프런(자바코테) 2-3] 가위바위보</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex04_%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98_%EC%88%98%EC%97%B4/Main.java">[인프런(자바코테) 2-4] 피보나치 수열</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex05_%EC%86%8C%EC%88%98_%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%B2%B4/Main.java">[인프런(자바코테) 2-5] 소수(에라토스테네스 체)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex06_%EB%92%A4%EC%A7%91%EC%9D%80_%EC%86%8C%EC%88%98/Main.java">[인프런(자바코테) 2-6] 뒤집은 소수</a> - isPrime(), getReverseNumber()<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex07_%EC%A0%90%EC%88%98%EA%B3%84%EC%82%B0/Main.java">[인프런(자바코테) 2-7] 점수계산</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex08_%EB%93%B1%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 2-8] 등수구하기</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex09_%EA%B2%A9%EC%9E%90%ED%8C%90_%EC%B5%9C%EB%8C%80%ED%95%A9/Main.java">[인프런(자바코테) 2-9] 격자판 최대합</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex10_%EB%B4%89%EC%9A%B0%EB%A6%AC/Main.java">[인프런(자바코테) 2-10] 봉우리</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex11_%EC%9E%84%EC%8B%9C%EB%B0%98%EC%9E%A5_%EC%A0%95%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 2-11] 임시반장정하기</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex12_%EB%A9%98%ED%86%A0%EB%A7%81/Main.java">[인프런(자바코테) 2-12] 멘토링</a><br/>
 </details><br/>
 
 <details>
