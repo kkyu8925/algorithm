@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Main {
 
     public int[] solution(String str, char ch) {
-        int[] answer = new int[str.length()];
-        int strLen = str.length();
-        int distance = strLen; // 최대 길이
+        int length = str.length();
+        int[] answer = new int[length];
+        int distance = length; // 최대 길이
 
-        for (int i = 0; i < strLen; i++) {
+        for (int i = 0; i < length; i++) {
             if (str.charAt(i) == ch) {
                 distance = 0;
             } else {
@@ -18,9 +18,9 @@ public class Main {
             answer[i] = distance;
         }
 
-        distance = strLen;
+        distance = length;
 
-        for (int i = strLen - 1; i >= 0; i--) {
+        for (int i = length - 1; i >= 0; i--) {
             if (str.charAt(i) == ch) {
                 distance = 0;
             } else {
