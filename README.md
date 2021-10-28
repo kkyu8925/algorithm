@@ -27,7 +27,7 @@
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex07_%EC%A0%90%EC%88%98%EA%B3%84%EC%82%B0/Main.java">[인프런(자바코테) 2-7] 점수계산</a><br/>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex08_%EB%93%B1%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 2-8] 등수구하기</a><br/>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex09_%EA%B2%A9%EC%9E%90%ED%8C%90_%EC%B5%9C%EB%8C%80%ED%95%A9/Main.java">[인프런(자바코테) 2-9] 격자판 최대합</a><br/>
-        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex10_%EB%B4%89%EC%9A%B0%EB%A6%AC/Main.java">[인프런(자바코테) 2-10] 봉우리</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex10_%EB%B4%89%EC%9A%B0%EB%A6%AC/Main.java">[인프런(자바코테) 2-10] 봉우리</a> - Array 상하좌우<br/>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex11_%EC%9E%84%EC%8B%9C%EB%B0%98%EC%9E%A5_%EC%A0%95%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 2-11] 임시반장 정하기</a><br/>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section02/ex12_%EB%A9%98%ED%86%A0%EB%A7%81/Main.java">[인프런(자바코테) 2-12] 멘토링</a><br/>
 </details><br/>
