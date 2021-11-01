@@ -34,13 +34,12 @@
 
 <details>
     <summary>3. Two Pointer(TP), Sliding Window(SW)</summary>
-        <a href="">[인프런(자바코테) 3-1] 두 배열 합치기(TP)</a><br/>
-        <a href="">[인프런(자바코테) 3-2] 공통원소 구하기(TP)</a><br/>
-        <a href="">[인프런(자바코테) 3-3] 최대 매출(SW)</a><br/>
-        <a href="">[인프런(자바코테) 3-4] 연속 부분수열(TP,SW)</a><br/>
-        <a href="">[인프런(자바코테) 3-5-1] 연속된 자연수의 합(TP)</a><br/>
-        <a href="">[인프런(자바코테) 3-5-2] 연속된 자연수의 합(수학공식)</a><br/>
-        <a href="">[인프런(자바코테) 3-6] 최대 길이 연속부분수열(TP,SW)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex01_%EB%91%90_%EB%B0%B0%EC%97%B4_%ED%95%A9%EC%B9%98%EA%B8%B0/Main.java">[인프런(자바코테) 3-1] 두 배열 합치기</a> - TP<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex02_%EA%B3%B5%ED%86%B5%EC%9B%90%EC%86%8C_%EA%B5%AC%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 3-2] 공통원소 구하기</a> - TP<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex03_%EC%B5%9C%EB%8C%80_%EB%A7%A4%EC%B6%9C/Main.java">[인프런(자바코테) 3-3] 최대 매출</a> - SW<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex04_%EC%97%B0%EC%86%8D_%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4/Main.java">[인프런(자바코테) 3-4] 연속 부분수열</a> - TP, SW<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex05_%EC%97%B0%EC%86%8D%EB%90%9C_%EC%9E%90%EC%97%B0%EC%88%98%EC%9D%98_%ED%95%A9/Main.java">[인프런(자바코테) 3-5] 연속된 자연수의 합</a> - TP & 수학공식<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section03/ex06_%EC%B5%9C%EB%8C%80_%EA%B8%B8%EC%9D%B4_%EC%97%B0%EC%86%8D%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4/Main.java">[인프런(자바코테) 3-6] 최대 길이 연속부분수열</a> - TP, SW<br/>
 </details><br/>
 
 <details>
