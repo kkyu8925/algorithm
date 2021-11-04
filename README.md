@@ -44,11 +44,11 @@
 
 <details>
     <summary>4. HashMap, TreeSet(해쉬, 정렬지원 Set)</summary>
-        <a href="">[인프런(자바코테) 4-1] 학급 회장(HashMap)</a><br/>
-        <a href="">[인프런(자바코테) 4-2] 아나그램(HashMap)</a><br/>
-        <a href="">[인프런(자바코테) 4-3] 매출액의 종류(Hash, Sliding Window)</a><br/>
-        <a href="">[인프런(자바코테) 4-4] 모든 아나그램 찾기(Hash, Sliding Window)</a><br/>
-        <a href="">[인프런(자바코테) 4-5] K번째 큰 수(TreeSet)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex01_%ED%95%99%EA%B8%89_%ED%9A%8C%EC%9E%A5/Main.java">[인프런(자바코테) 4-1] 학급 회장(HashMap)</a> - Map.getOrDefault(), Map.keySet()<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex02_%EC%95%84%EB%82%98%EA%B7%B8%EB%9E%A8/Main.java">[인프런(자바코테) 4-2] 아나그램(HashMap)</a> - Map.getOrDefault(), Map.containsKey()<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex03_%EB%A7%A4%EC%B6%9C%EC%95%A1%EC%9D%98_%EC%A2%85%EB%A5%98/Main.java">[인프런(자바코테) 4-3] 매출액의 종류(Hash, Sliding Window)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex04_%EB%AA%A8%EB%93%A0_%EC%95%84%EB%82%98%EA%B7%B8%EB%9E%A8_%EC%B0%BE%EA%B8%B0/Main.java">[인프런(자바코테) 4-4] 모든 아나그램 찾기(Hash, Sliding Window)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex05_K%EB%B2%88%EC%A7%B8_%ED%81%B0_%EC%88%98/Main.java">[인프런(자바코테) 4-5] K번째 큰 수(TreeSet)</a><br/>
 </details><br/>
 
 <details>
