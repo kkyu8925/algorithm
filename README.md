@@ -46,21 +46,21 @@
     <summary>4. HashMap, TreeSet(해쉬, 정렬지원 Set)</summary>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex01_%ED%95%99%EA%B8%89_%ED%9A%8C%EC%9E%A5/Main.java">[인프런(자바코테) 4-1] 학급 회장(HashMap)</a> - Map.getOrDefault(), Map.keySet()<br/>
         <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex02_%EC%95%84%EB%82%98%EA%B7%B8%EB%9E%A8/Main.java">[인프런(자바코테) 4-2] 아나그램(HashMap)</a> - Map.getOrDefault(), Map.containsKey()<br/>
-        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex03_%EB%A7%A4%EC%B6%9C%EC%95%A1%EC%9D%98_%EC%A2%85%EB%A5%98/Main.java">[인프런(자바코테) 4-3] 매출액의 종류(Hash, Sliding Window)</a><br/>
-        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex04_%EB%AA%A8%EB%93%A0_%EC%95%84%EB%82%98%EA%B7%B8%EB%9E%A8_%EC%B0%BE%EA%B8%B0/Main.java">[인프런(자바코테) 4-4] 모든 아나그램 찾기(Hash, Sliding Window)</a><br/>
-        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex05_K%EB%B2%88%EC%A7%B8_%ED%81%B0_%EC%88%98/Main.java">[인프런(자바코테) 4-5] K번째 큰 수(TreeSet)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex03_%EB%A7%A4%EC%B6%9C%EC%95%A1%EC%9D%98_%EC%A2%85%EB%A5%98/Main.java">[인프런(자바코테) 4-3] 매출액의 종류(HashMap, Sliding Window)</a> - Map.getOrDefault()<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex04_%EB%AA%A8%EB%93%A0_%EC%95%84%EB%82%98%EA%B7%B8%EB%9E%A8_%EC%B0%BE%EA%B8%B0/Main.java">[인프런(자바코테) 4-4] 모든 아나그램 찾기(HashMap, Sliding Window)</a> - Map.getOrDefault(), aMap.equals(bMap)<br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section04/ex05_K%EB%B2%88%EC%A7%B8_%ED%81%B0_%EC%88%98/Main.java">[인프런(자바코테) 4-5] K번째 큰 수(TreeSet)</a> - Collections.reverseOrder()<br/>
 </details><br/>
 
 <details>
     <summary>5. Stack, Queue</summary>
-        <a href="">[인프런(자바코테) 5-1] 올바른 괄호</a><br/>
-        <a href="">[인프런(자바코테) 5-2] 괄호문자제거</a><br/>
-        <a href="">[인프런(자바코테) 5-3] 크레인 인형뽑기(카카오)</a><br/>
-        <a href="">[인프런(자바코테) 5-4] 후위식 연산(postfix)</a><br/>
-        <a href="">[인프런(자바코테) 5-5] 쇠막대기</a><br/>
-        <a href="">[인프런(자바코테) 5-6] 공주 구하기</a><br/>
-        <a href="">[인프런(자바코테) 5-7] 교육과정 설계</a><br/>
-        <a href="">[인프런(자바코테) 5-8] 응급실</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex01_%EC%98%AC%EB%B0%94%EB%A5%B8_%EA%B4%84%ED%98%B8/Main.java">[인프런(자바코테) 5-1] 올바른 괄호</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex02_%EA%B4%84%ED%98%B8%EB%AC%B8%EC%9E%90%EC%A0%9C%EA%B1%B0/Main.java">[인프런(자바코테) 5-2] 괄호문자제거</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex03_%ED%81%AC%EB%A0%88%EC%9D%B8_%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0/Main.java">[인프런(자바코테) 5-3] 크레인 인형뽑기(카카오)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex04_%ED%9B%84%EC%9C%84%EC%8B%9D_%EC%97%B0%EC%82%B0/Main.java">[인프런(자바코테) 5-4] 후위식 연산(postfix)</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex05_%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/Main.java">[인프런(자바코테) 5-5] 쇠막대기</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex06_%EA%B3%B5%EC%A3%BC_%EA%B5%AC%ED%95%98%EA%B8%B0/Main.java">[인프런(자바코테) 5-6] 공주 구하기</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex07_%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95_%EC%84%A4%EA%B3%84/Main.java">[인프런(자바코테) 5-7] 교육과정 설계</a><br/>
+        <a href="https://github.com/kkyu8925/algorithm/blob/main/Java/src/inflearn/section05/ex08_%EC%9D%91%EA%B8%89%EC%8B%A4/Main.java">[인프런(자바코테) 5-8] 응급실</a><br/>
 </details><br/>
 
 <details>

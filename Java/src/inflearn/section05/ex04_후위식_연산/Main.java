@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Main {
     private int solution(String str) {
-        int answer = 0;
+        int answer;
         Stack<Integer> stack = new Stack<>();
 
         for (char ch : str.toCharArray()) {
